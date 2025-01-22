@@ -1,4 +1,4 @@
-// 
+// login.js
 // Handles user login logic
 function loginUser(credentials) {
     if (!credentials.username || !credentials.password) {
@@ -8,7 +8,6 @@ function loginUser(credentials) {
         };
     }
 
-    // Simulate database check (replace with actual DB logic)
     console.log("Login successful for user:", credentials.username);
 
     return {
@@ -16,4 +15,3 @@ function loginUser(credentials) {
         message: "Login successful."
     };
 }
-

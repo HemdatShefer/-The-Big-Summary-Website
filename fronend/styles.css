@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f4f4f4;
     box-sizing: border-box;
 }
 
@@ -10,6 +11,7 @@ header {
     color: #fff;
     padding: 10px;
     text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -18,13 +20,25 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 140px);
 }
 
 form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 label,
@@ -32,7 +46,7 @@ input,
 button {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 button {
@@ -40,7 +54,10 @@ button {
     color: white;
     border: none;
     padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 button:hover {
