@@ -32,9 +32,37 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Register</button>
+            <button type="submit" id="registerBtn">Register</button>
         </form>
+        <div>
+            <a href="catalog.html" class="catalog-link">Go to Catalog</a>
+        </div>
     </main>
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = {
+                username: document.getElementById("username").value,
+                institution: document.getElementById("institution").value,
+                fieldOfStudy: document.getElementById("fieldOfStudy").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                password: document.getElementById("password").value
+            };
+
+            const result = registerUser(formData);
+            console.log(result);
+
+            if (result.success) {
+                alert("Registration successful! Redirecting to catalog...");
+                window.location.href = "catalog.html";
+            } else {
+                alert("Registration failed: " + result.message);
+            }
+        });
+    </script>
 </body>
 
 </html>

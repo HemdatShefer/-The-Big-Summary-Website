@@ -82,23 +82,3 @@ function hashPassword(password) {
     return btoa(password); // Simulated hashing for this example
 }
 
-// Example Usage
-const newUser = {
-    username: "student123",
-    institution: "Academic University",
-    fieldOfStudy: "Computer Science",
-    email: "student123@university.edu",
-    phone: "123-456-7890",
-    password: "securepassword123"
-};
-
-const registrationResult = registerUser(newUser);
-console.log(registrationResult);
-
-const loginCredentials = {
-    username: "student123",
-    password: "securepassword123"
-};
-
-const loginResult = loginUser(loginCredentials);
-console.log(loginResult);
