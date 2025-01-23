@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Student Summary Sales</title>
+    <style>
+        /* Professional and Modern CSS Styles for the Profile Page */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f3f4f6, #d9e2ec);
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+        .header h1 {
+            margin: 15px 0 5px;
+            font-size: 2.5rem;
+            color: #222;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .user-info {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .user-info div:last-child {
+            border-bottom: none;
+        }
+
+        .user-info span {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .user-info button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .user-info button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        .summaries {
+            margin-top: 40px;
+        }
+
+        .summaries h2 {
+            font-size: 2rem;
+            color: #444;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .summary:hover {
+            transform: scale(1.02);
+        }
+
+        .summary img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .summary-details {
+            flex: 1;
+        }
+
+        .summary-details p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .summary-details a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .summary-details a:hover {
+            color: #2e7d32;
+        }
+
+        .summary button {
+            margin-top: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .summary button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .rating span {
+            font-size: 1.5rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .rating span:hover,
+        .rating span.selected {
+            color: #ffc107;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.corporatephotographerslondon.com/wp-content/uploads/2023/02/LinkedIn_Profile_Photo.jpg"
+                alt="User Picture">
+            <h1>John Doe</h1>
+        </div>
+        <div class="user-info">
+            <div>
+                <span>Full Name:</span>
+                <span><input type="text" value="John Doe" disabled></span>
+            </div>
+            <div>
+                <span>Phone Number:</span>
+                <span><input type="text" value="123-456-7890" disabled></span>
+            </div>
+            <div>
+                <span>Email:</span>
+                <span><input type="text" value="johndoe@example.com" disabled></span>
+            </div>
+            <div>
+                <span>Institution:</span>
+                <span><input type="text" value="University of Science" disabled></span>
+            </div>
+            <div>
+                <span>Year:</span>
+                <span><input type="text" value="2nd Year" disabled></span>
+            </div>
+            <div>
+                <span>Field of Study:</span>
+                <span><input type="text" value="Computer Science" disabled></span>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="edit-button">Edit details</button>
+            </div>
+        </div>
+
+        <div class="summaries">
+            <h2>Purchased Summaries</h2>
+
+            <div class="summary">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR84Jt11Etm2CcC4PwjTGWPXFzOd8aC72kadg&s"
+                    alt="Summary Image">
+                <div class="summary-details">
+                    <p><strong>Course:</strong> Linear Algebra</p>
+                    <p><strong>Seller:</strong> Jane Smith</p>
+                    <p><strong>Price:</strong> $15.00</p>
+                    <p><a href="#">View Summary</a></p>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <textarea class="comment-box" placeholder="Add your review here..."></textarea>
+                    <button>Submit Rating</button>
+                </div>
+            </div>
+
+            <!-- Additional summaries can be added here -->
+        </div>
+    </div>
+
+    <style>
+        .comment-box {
+            display: block;
+            width: 100%;
+            height: 60px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .comment-box:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+    </style>
+
+    <script>
+        const editButton = document.getElementById('edit-button');
+        const inputs = document.querySelectorAll('.user-info input');
+
+        editButton.addEventListener('click', () => {
+            const isEditing = editButton.textContent === 'Save Changes';
+
+            inputs.forEach(input => input.disabled = isEditing);
+            editButton.textContent = isEditing ? 'Edit All Details' : 'Save Changes';
+        });
+
+        document.querySelectorAll('.rating span').forEach((star, index, stars) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    s.classList.toggle('selected', i <= index);
+                });
+            });
+        });
+
+        document.querySelectorAll('.summary button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const summaryDiv = e.target.parentElement;
+                const ratingDiv = summaryDiv.querySelector('.rating');
+                const commentBox = summaryDiv.querySelector('.comment-box');
+
+                const stars = ratingDiv.querySelectorAll('span.selected');
+                const rating = stars.length;
+                const comment = commentBox.value.trim();
+
+                if (rating > 0 && comment) {
+                    alert(`Rating: ${rating} stars\nComment: ${comment}`);
+                    commentBox.disabled = true;
+                    e.target.textContent = "Edit Rating";
+                    e.target.addEventListener('click', () => {
+                        commentBox.disabled = false;
+                        e.target.textContent = "Submit Rating";
+                    }, { once: true });
+                } else {
+                    alert("Please provide a rating and a comment.");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

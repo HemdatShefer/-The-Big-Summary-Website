@@ -4,65 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - The Big Summary Website</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <h1>Register</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="catalog.html">Catalog</a>
+        </nav>
     </header>
     <main>
-        <form id="registerForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <form id="register-form" class="form-container">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
 
-            <label for="institution">Educational Institution:</label>
-            <input type="text" id="institution" name="institution">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-            <label for="fieldOfStudy">Field of Study:</label>
-            <input type="text" id="fieldOfStudy" name="fieldOfStudy">
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <div class="form-group">
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution" placeholder="Enter your institution" required>
+            </div>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
+            <div class="form-group">
+                <label for="year">Year of Study:</label>
+                <input type="number" id="year" name="year" placeholder="Enter your year of study (e.g., 1, 2, 3)"
+                    required>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <div class="form-group">
+                <label for="field">Field of Study:</label>
+                <input type="text" id="field" name="field" placeholder="Enter your field of study" required>
+            </div>
 
-            <button type="submit" id="registerBtn">Register</button>
+            <button type="submit" class="btn">Register</button>
         </form>
-        <div>
-            <a href="catalog.html" class="catalog-link">Go to Catalog</a>
-        </div>
     </main>
-    <script src="scripts.js"></script>
-    <script>
-        document.getElementById("registerForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const formData = {
-                username: document.getElementById("username").value,
-                institution: document.getElementById("institution").value,
-                fieldOfStudy: document.getElementById("fieldOfStudy").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                password: document.getElementById("password").value
-            };
-
-            const result = registerUser(formData);
-            console.log(result);
-
-            if (result.success) {
-                alert("Registration successful! Redirecting to catalog...");
-                window.location.href = "catalog.html";
-            } else {
-                alert("Registration failed: " + result.message);
-            }
-        });
-    </script>
+    <footer>
+        <p>&copy; 2025 The Big Summary Website</p>
+    </footer>
+    <script src="user_registration.js"></script>
 </body>
 
 </html>
